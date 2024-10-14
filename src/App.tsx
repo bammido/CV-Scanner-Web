@@ -1,9 +1,15 @@
-function App() {
+import Description from "./components/description"
+import ThemeToogleButton from "./components/themeToogle"
+import Title from "./components/title"
+import { GlobalContextProvider } from "./contexts/globalContext"
 
+function App() {
   return (
-    <>
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We invest in the world’s potential</h1>
-    </>
+    <GlobalContextProvider>
+      <Title>Quer um currículo que se destaque?</Title>
+      <Description>Faça o teste agora e receba um feedback completo.</Description>
+      <ThemeToogleButton />
+    </GlobalContextProvider>
   )
 }
 
