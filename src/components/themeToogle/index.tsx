@@ -9,7 +9,7 @@ export default function ThemeToogleButton() {
 
     const {theme} = useGlobalContext()
 
-    return <Button type="dark" onClick={toogleTheme}>
+    return <Button variant="dark" onClick={toogleTheme}>
         {theme !== 'dark' && <FontAwesomeIcon icon={faMoon} />}
         {theme === 'dark' && <FontAwesomeIcon icon={faSun} />}
     </Button>
