@@ -30,5 +30,5 @@ export default function Button({variant, children, text, ...rest}: ButtonProps) 
             break
     }
 
-    return <button className={className} {...rest} >{children || text}</button>
+    return <button className={`${className} ${rest.disabled? 'opacity-50 cursor-not-allowed' : ''}`} {...rest} >{children || text}</button>
 }

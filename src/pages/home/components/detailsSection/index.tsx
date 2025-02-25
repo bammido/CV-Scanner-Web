@@ -4,7 +4,7 @@ import Highlight from "../../../../components/highlight";
 import Title from "../../../../components/title";
 
 export default function DetailsSection() {
-    return <div className="flex gap-6 flex-col items-center grow bg-slate-300 dark:bg-gray-700 py-4">
+    return <div className="flex gap-6 flex-col items-center grow bg-slate-300 dark:bg-gray-700 py-4 px-2">
 
     <Title variant="h2"><Highlight>Otimize</Highlight> seu currículo para passar nos sistemas de seleção automatizada.</Title>
     
@@ -26,6 +26,5 @@ export default function DetailsSection() {
     </Card>
     </ul>
     <p><b>Com nosso verificador, você aumenta suas chances de ser selecionado para as entrevistas e de conseguir o emprego dos seus sonhos.</b></p>
-
 </div>
 }
