@@ -1,9 +1,9 @@
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import { GoogleAuthProvider } from "firebase/auth";
 import { createContext, useContext } from "react";
-import { firebaseAuth } from "../service/apps/firebase";
-import { cvScannerApi } from "../service/api/cvScannerApi";
+// import { firebaseAuth } from "../service/apps/firebase";
+// import { cvScannerApi } from "../service/api/cvScannerApi";
 
-const provider = new GoogleAuthProvider();
+// const provider = new GoogleAuthProvider();
 
 interface ILoginContext {
     singInGoogle: () => Promise<void>
@@ -16,16 +16,16 @@ export function LoginContextProvider({ children }: { children : React.ReactNode}
 
     async function singInGoogle() {
         try {
-          const result = await signInWithPopup(firebaseAuth, provider)
-            // const token = credential?.accessToken;
-            const user = result.user;
-            const idToken = await result.user.getIdToken(true);
+          // const result = await signInWithPopup(firebaseAuth, provider)
+          //   // const token = credential?.accessToken;
+          //   const user = result.user;
+          //   const idToken = await result.user.getIdToken(true);
 
-            console.log({idToken, user})
+          //   console.log({idToken, user})
 
-            const res = await cvScannerApi.get(`/api/cvResume/${idToken}`);
+          //   const res = await cvScannerApi.get(`/api/cvResume/${idToken}`);
 
-            console.log(res);
+          //   console.log(res);
     
     
             // let usuario = (await usuarioService.login(idToken))?.data  
